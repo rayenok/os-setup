@@ -1,6 +1,0 @@
-autotools-dev
-automake
-cscope
-exuberant-ctags
-libc6-dev
-pandoc
