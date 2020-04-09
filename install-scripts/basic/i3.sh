@@ -1,3 +1,5 @@
+sudo apt install jq i3 
+
 # i3
 echo "Configuring i3"
 if [ -e ~/.i3 ]; then
