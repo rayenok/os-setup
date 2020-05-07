@@ -1,4 +1,4 @@
-sudo apt install jq i3 
+sudo apt install jq i3 feh nitrogen compton terminology
 
 # i3
 echo "Configuring i3"
