@@ -74,7 +74,7 @@ if [ "$interactive" = "1" ]; then
 
     installscripts="$(find $dotfilesdir/install-scripts -maxdepth 2 -type f | awk -F/ '{print $(NF-1)"/"$NF" ON"}')"
     installscriptsarray=($installscripts)
-    selectedscripts=$(whiptail --title "Install scripts" --separate-output --noitem --checklist "" 16 58 10 "${installscriptsarray[@]}" 3>&1 1>&2 2>&3)
+    selectedscripts=$(whiptail --title "Install scripts" --separate-output --noitem --checklist "" 16 58 10 "${installscriptsarray[@]}" '' 0 3>&1 1>&2 2>&3)
 
     exitstatus=$?
     if [ $exitstatus != 0 ]; then
