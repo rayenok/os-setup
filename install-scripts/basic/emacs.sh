@@ -19,7 +19,9 @@ perl pkg-config plantuml python-pygments python2.7 python3 sqlite3 \
 sqlitebrowser texinf wget xaw3dg-dev xorg-dev zip zlib1g-dev \
 build-essential texinfo libx11-dev libxpm-dev libjpeg-dev \
 libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev\
-libxpm-dev automake autoconf libghc-gnutls-dev libtool-bin
+libxpm-dev automake autoconf libghc-gnutls-dev libtool-bin autoconf\
+texinfo libjpeg-dev libncurses5-dev libtiff5-dev libgif-dev libpng-dev\
+libxpm-dev libgtk-3-dev libgnutls28-dev
 
 ## download and install
 sudo pip install cmake --upgrade
@@ -35,10 +37,12 @@ make
 sudo make install
 
 
-cd /opt/
+# cd /opt/
 # get spacemacs from my repo
-sudo git clone https://github.com/rayenok/spacemacs.git /opt/spacemacs
-sudo chown -R r13:r13 /opt/spacemacs
-sudo ln -s /opt/spacemacs/ ~/.spacemacs.d
-cd /opt/spacemacs
-git checkout develop
+# sudo git clone https://github.com/rayenok/spacemacs.git /opt/spacemacs
+# sudo chown -R r13:r13 /opt/spacemacs
+# sudo ln -s /opt/spacemacs/ ~/.spacemacs.d
+# cd /opt/spacemacs
+# git checkout develop
+
+# TODO: Update all this configuration for doom emacs
