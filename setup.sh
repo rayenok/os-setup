@@ -72,9 +72,9 @@ function install_apps(){
 
 if [ "$interactive" = "1" ]; then
 
-    installscripts="$(find $dotfilesdir/install-scripts -maxdepth 2 -type f | awk -F/ '{print $(NF-1)"/"$NF" ON"}')"
+    installscripts="$(find $dotfilesdir/install-scripts -maxdepth 2 -type f | awk -F/ '{print $(NF-1)"/"$NF" OFF"}')"
     installscriptsarray=($installscripts)
-    selectedscripts=$(whiptail --title "Install scripts" --separate-output --noitem --checklist "" 16 58 10 "${installscriptsarray[@]}" '' 0 3>&1 1>&2 2>&3)
+    selectedscripts=$(whiptail --title "Install scripts" --separate-output --noitem --checklist "" 16 58 10 "${installscriptsarray[@]}" 3>&1 1>&2 2>&3)
 
     exitstatus=$?
     if [ $exitstatus != 0 ]; then
@@ -122,7 +122,7 @@ function update_config_files(){
 
 if [ "$interactive" = "1" ]; then
 
-    configfiles="$(find -L $dotfilesdir/config-files -maxdepth 1 -type f | awk -F/ '{print $NF" ON"}' | grep -Pv '(.gitignore|ubuntu_setup.sh|startup.sh|.spacemacs)')"
+    configfiles="$(find -L $dotfilesdir/config-files -maxdepth 1 -type f | awk -F/ '{print $NF" OFF"}' | grep -Pv '(.gitignore|ubuntu_setup.sh|startup.sh|.spacemacs)')"
     # echo $configfiles
     configfilesarray=($configfiles)
 
