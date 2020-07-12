@@ -99,13 +99,13 @@ fi
 echo "### Configurating environment with configfiles ###"
 function update_config_files(){
     for file in $selectedconfigfiles; do
-        if [ $file -eq "ranger"]; then
+        if [ $file -eq "ranger" ] ; then
             ln -s $dotfilesdir/config-files/$file ~/.config/$file
         else
-            if [ -L ~/$file ]; then
+            if [ -L ~/$file ] ; then
                 echo "Deleting existing symlink ~/$file"
                 unlink ~/$file
-            elif [ -e ~/$file ]; then
+            elif [ -e ~/$file ] ; then
                 echo "Deleting existing file ~/$file"
                 rm -rf ~/$file 
             echo "Creating symlink to $file in ~"
