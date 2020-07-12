@@ -35,6 +35,11 @@ echo "Adding APT repositories"
 
 distribution=$(cat /etc/*-release | grep DISTRIB_ID | awk -F= '{print $2}')
 
+echo "Updating repositories"
+sudo apt update
+echo "Installing whiptail"
+sudo apt install -y whiptail
+
 if [ "$distribution" == "Kali" ]; then
     echo "add-apt-repository does not work properly under Kali Linux, please add required repositories by hand!"
 else
