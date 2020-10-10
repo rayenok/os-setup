@@ -21,12 +21,13 @@ build-essential texinfo libx11-dev libxpm-dev libjpeg-dev \
 libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev\
 libxpm-dev automake autoconf libghc-gnutls-dev libtool-bin autoconf\
 texinfo libjpeg-dev libncurses5-dev libtiff5-dev libgif-dev libpng-dev\
-libxpm-dev libgtk-3-dev libgnutls28-dev
+libxpm-dev libgtk-3-dev libgnutls28-dev libjansson-dev ripgrep
 
 ## download and install
 sudo pip install cmake --upgrade
 
 
+# Install emacs 27
 cd /opt/
 sudo git clone -b emacs-27 --depth 1 git://git.sv.gnu.org/emacs.git
 sudo chown -R $USER:$USER /opt/emacs
@@ -36,6 +37,12 @@ cd emacs
 make
 sudo make install
 
+# Get my config
+git clone https://github.com/rayenok/.doom.d.git ~/.doom.d
+
+# Install Doom emacs
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
 
 # cd /opt/
 # get spacemacs from my repo
