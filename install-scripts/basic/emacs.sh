@@ -21,7 +21,8 @@ build-essential texinfo libx11-dev libxpm-dev libjpeg-dev \
 libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev\
 libxpm-dev automake autoconf libghc-gnutls-dev libtool-bin autoconf\
 texinfo libjpeg-dev libncurses5-dev libtiff5-dev libgif-dev libpng-dev\
-libxpm-dev libgtk-3-dev libgnutls28-dev libjansson-dev ripgrep
+libxpm-dev libgtk-3-dev libgnutls28-dev libjansson-dev ripgrep cmake libvterm-dev\
+libtool-bin
 
 ## download and install
 sudo pip install cmake --upgrade
